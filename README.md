@@ -118,6 +118,7 @@ To stop Explorer after it has been started with `forever`, issue the following c
 
 ## Enabling Top Accounts on Old Nodes
 To Enable Top Accounts on Older Nodes of Rise , You need to start it with this command on your nodes:
+
 `forever start app.js TOP=true`
 
 To Disable Top Accounts on Older Nodes of Rise, You need to stop it with this command on your nodes:
