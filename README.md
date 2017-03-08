@@ -123,7 +123,7 @@ To Enable Top Accounts on Older Nodes of Rise , You need to start it with this c
 
 To Disable Top Accounts on Older Nodes of Rise, You need to stop it with this command on your nodes:
 
-`forever stop app.js`
+`forever start app.js`
 
 ## License
 
