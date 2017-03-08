@@ -114,7 +114,7 @@ var ActivityGraph = function () {
         var txsVolume = function (chain) {
             return chain.reduce(function (vol, tx) {
                 return vol += tx.amount;
-            }, 0).value() / Math.pow(10, 8);
+            }, 0).value();
         };
 
         var minTime = function (chain) {
@@ -229,7 +229,7 @@ ActivityGraph.prototype.addAccount = function (id) {
 };
 
 ActivityGraph.prototype.amount = function (tx, sign) {
-    return (sign + tx.amount / Math.pow(10, 8)) + ' RISE';
+    return (sign + tx.amount / Math.pow(10, 8)) + ' LSK';
 };
 
 ActivityGraph.prototype.addTxSender = function (tx) {
@@ -301,7 +301,7 @@ ActivityGraph.prototype.addBlockTxs = function (block) {
     }
 };
 
-angular.module('rise_explorer.tools').factory('activityGraph',
+angular.module('lisk_explorer.tools').factory('activityGraph',
   function ($socket) {
       return function ($scope) {
           var activityGraph = new ActivityGraph(),

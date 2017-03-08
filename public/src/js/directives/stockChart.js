@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('rise_explorer.tools')
+angular.module('lisk_explorer.tools')
   .directive('stockChart', function ($timeout) {
       function StockChart (scope, elm, attr) {
           var self = this;
@@ -34,8 +34,8 @@ angular.module('rise_explorer.tools')
                       fromField: 'btcVolume',
                       toField: 'btcVolume'
                   }, {
-                      fromField: 'riseVolume',
-                      toField: 'riseVolume'
+                      fromField: 'liskVolume',
+                      toField: 'liskVolume'
                   }, {
                       fromField: 'numTrades',
                       toField: 'numTrades'

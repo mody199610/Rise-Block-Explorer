@@ -3,5 +3,5 @@
 angular.element(document).ready(
   function () {
       // Init the app
-      // angular.bootstrap(document, ['rise_explorer']);
+      // angular.bootstrap(document, ['lisk_explorer']);
   });

@@ -7,42 +7,43 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/"><div class="logo" title="Rise"></div></a>
+      <a class="navbar-brand" href="/"><div class="logo" title="Lisk"><img src="/img/logo.png"></div></a>
     </div>
     <div class="collapse navbar-collapse" collapse="$root.isCollapsed">
       <form id="search-form" data-ng-controller="SearchController" class="navbar-form navbar-left hidden-xs" role="search" data-ng-submit="search()">
         <div class="form-group" data-ng-class="{'has-error': badQuery}">
-          <input id="search" type="text" class="form-control" data-ng-model="q" data-ng-class="{'loading': loading}" placeholder="Search for block, transaction or address" data-ng-submit="search()">
+          <input id="search" type="text" class="form-control" data-ng-model="q" data-ng-class="{'loading': loading}" placeholder="Find a block, transaction, address or delegate" data-ng-submit="search()">
         </div>
         <div class="no_matching text-danger" data-ng-if="badQuery">No matching records found!</div>
       </form>
       <div class="status" data-ng-show="blockStatus">
         <span class="height"><strong>Height: </strong> {{blockStatus.height}}</span>
-        <span class="supply">&middot; <strong>Supply: </strong> {{blockStatus.supply | rise | number:0}}</span>
-        <span class="rise-btc">&middot; <strong>RISE/BTC: </strong> {{rise_btc}}</span>
-        <span class="rise-usd">&middot; <strong>RISE/USD: </strong> {{rise_usd}}</span>
-      </div>
+        <span class="supply">&middot; <strong>Supply: </strong> {{blockStatus.supply | lisk | number:0}}</span>
+  <p>
+        <span class="RISEBTC"><strong>RISE/BTC: </strong> {{currency.tickers.LSK.BTC || 'N/A'}}</span>
+        <span class="lisk-usd">&middot; <strong>RISE/{{currency.tickers.LSK[currency.symbol] && currency.symbol !== 'BTC' ? currency.symbol : 'USD'}}: </strong> {{currency.tickers.LSK[currency.symbol] && currency.symbol !== 'BTC' ? (currency.tickers.LSK[currency.symbol] | number:4) : (currency.tickers.LSK.USD | number:4) || 'N/A'}}</span>      </div>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a href="/topAccounts">Top Accounts</a>
-        </li>
+        </a>
         <li class="dropdown" dropdown>
           <a href class="dropdown-toggle" dropdown-toggle role="button" aria-expanded="false">Tools <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="/topAccounts">Top Accounts</a>
+            </li>
             <li>
               <a href="/activityGraph">Activity Graph</a>
             </li>
             <li>
               <a href="/delegateMonitor">Delegate Monitor</a>
             </li>
-            <!--<li>
+            <li data-ng-if="marketWatcher">
               <a href="/marketWatcher">Market Watcher</a>
-            </li>-->
+            </li>
             <li>
               <a href="/networkMonitor">Network Monitor</a>
             </li>
             <li>
-              <a href="https://wallet.rise.vision" target="_blank">Web Login</a>
+              <a href="https://login.lisk.io" target="_blank">Web Login</a>
             </li>
           </ul>
         </li>

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('rise_explorer.tools')
+angular.module('lisk_explorer.tools')
   .directive('peers', function (orderBy) {
       return {
           restrict: 'E',

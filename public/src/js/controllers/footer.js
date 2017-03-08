@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('rise_explorer.system').controller('FooterController',
+angular.module('lisk_explorer.system').controller('FooterController',
   function ($scope) {
 
   });

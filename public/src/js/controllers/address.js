@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('rise_explorer.address').controller('AddressController',
+angular.module('lisk_explorer.address').controller('AddressController',
   function ($scope, $rootScope, $routeParams, $location, $http, addressTxs) {
       $scope.getAddress = function () {
           $http.get('/api/getAccount', {

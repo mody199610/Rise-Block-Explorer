@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('rise_explorer')
+angular.module('lisk_explorer')
   .directive('whenScrolled', function ($window) {
       return {
           restric: 'A',
