@@ -96,11 +96,7 @@ To enable Top Accounts functionality, edit your Lisk Client config.json _(not th
     "topAccounts": false, <--- This line needs to be changed to read true
 ```
 
-After the change is made the Lisk Client will need to be restarted. (Example):
-
-`bash /PATH_TO_LISK_DIR/lisk.sh reload`
-
-## Managing Lisk Explorer
+## Managing Rise Explorer
 
 To test that Rise Explorer is configured correctly, run the following command:
 
@@ -122,10 +118,11 @@ To stop Explorer after it has been started with `forever`, issue the following c
 
 ## Enabling Top Accounts on Old Nodes
 To Enable Top Accounts on Older Nodes of Rise , You need to start it with this command on your nodes:
-'forever start app.js TOP=true'
+`forever start app.js TOP=true`
 
 To Disable Top Accounts on Older Nodes of Rise, You need to stop it with this command on your nodes:
-'forever stop app.js'
+
+`forever stop app.js`
 
 ## License
 
